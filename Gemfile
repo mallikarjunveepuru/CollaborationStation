@@ -24,6 +24,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'mongoid', '~> 4.0.0'
 gem 'devise'
 gem 'figaro', '1.0'
+gem 'foundation-rails'
+gem 'bootstrap-sass', '~> 3.3.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
