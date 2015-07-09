@@ -3,5 +3,5 @@ class Wiki
   field :title, type: String
   field :body, type: String
   field :private, type: Mongoid::Boolean
-  embedded_in :user
+  has_many :users
 end
