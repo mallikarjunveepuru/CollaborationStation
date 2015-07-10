@@ -6,18 +6,21 @@ class WikisController < ApplicationController
   end
 
   def show
+    authorize @wiki
   end
 
   def new
     @wiki = Wiki.new
+    authorize @wiki
   end
 
   def edit
-
+    authorize @wiki
   end
 
   def create
     @wiki = Wiki.new(wiki_params)
+    authorize @wiki
     if @wiki.save
       redirect_to @wiki, notice: "Your Wiki was saved successfully."
     else

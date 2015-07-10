@@ -1,10 +1,16 @@
 <h1><%= @wiki.title %></h1>
 
+
 <%= link_to "Edit Wiki", edit_wiki_path, class: 'btn btn-info' %>
+<br>
+<br>
 
 <div class="row">
   <div class="col-md-8">
-    <p class="lead"><%= @wiki.body %></p>
+    <div class="panel panel-info">
+      <div class="panel-heading"><%= @wiki.title %></div>
+      <div class="panel-body"><%= @wiki.body %></div>
+    </div>
   </div>
 
     <div class="col-md-8">
