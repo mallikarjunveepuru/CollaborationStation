@@ -2,14 +2,14 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Collaboration Station</a>
+     <%= link_to "Collaboration Station", root_path, class: 'navbar-brand' %>
     </div>
     <div>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
         <li><%= link_to "Wikis", wikis_path %></li> 
       <div class="pull-right user-info"> <% if user_signed_in? %>
     Welcome <%=  current_user.email %>
+    <%= link_to "Edit Account", edit_user_registration_path %>
     <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
 <% else %>
     <%= link_to "Sign in", new_user_session_path%> or <%= link_to "Sign up", new_user_registration_path %>
