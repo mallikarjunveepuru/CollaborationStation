@@ -31,6 +31,7 @@ gem 'faker'
 gem 'stripe'
 gem 'redcarpet'
 gem 'will_paginate_mongoid'
+gem 'google-webfonts-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

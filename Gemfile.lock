@@ -80,6 +80,8 @@ GEM
       sass (>= 3.2.0)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
+    google-webfonts-rails (0.0.4)
+      activesupport (> 3.2.0, < 5.0)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     i18n (0.7.0)
@@ -208,6 +210,7 @@ DEPENDENCIES
   faker
   figaro (= 1.0)
   foundation-rails
+  google-webfonts-rails
   jbuilder (~> 2.0)
   jquery-rails
   mongoid (~> 4.0.0)
