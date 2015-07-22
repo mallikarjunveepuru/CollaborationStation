@@ -1,4 +1,8 @@
 <h1>Wikis</h1>
+        <% if policy(Wiki.new).create? %>
+        <%= link_to "New Wiki", new_wiki_path, class: "btn btn-info" %>
+      <% end %>
+      <br>
 <div class="row">
   <div class="col-md-8">
     <% @wikis.each do |wiki| %>
@@ -10,9 +14,5 @@
         </div>
       </div>
       <% end %>
-      <div class="col-md-4">
-        <% if policy(Wiki.new).create? %>
-        <%= link_to "New Wiki", new_wiki_path, class: "btn btn-info" %>
-      </div>
-      <% end %>
-
+      
+      <%= will_paginate @wikis %>

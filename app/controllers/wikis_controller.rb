@@ -2,7 +2,7 @@ class WikisController < ApplicationController
   before_action :find_wiki, only: [:show, :edit, :update, :destroy]
 
   def index
-    @wikis = Wiki.all
+    @wikis = Wiki.paginate(page: params[:page], per_page: 15)
   end
 
   def show
