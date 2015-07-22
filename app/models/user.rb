@@ -6,6 +6,8 @@ class User
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
   has_many :wikis
+
+  has_and_belongs_to_many :collaborations, class_name: "Wiki", inverse_of: :collaborators
   
   ## Database authenticatable
   field :email,              type: String, default: ""

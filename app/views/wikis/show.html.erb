@@ -10,7 +10,10 @@
     <div class="panel panel-info">
       <div class="panel-heading"><%=  markdown_to_html @wiki.title %></div>
       <div class="panel-body"><%= markdown_to_html @wiki.body %></div>
-      <div class="panel-footer"><p>Created By:</p><%= @wiki.user.name %></div>
+      <div class="panel-footer"><p>Created By:</p><%= @wiki.user.name %>
+        <p>Collaborators</p><%= @wiki.collaborators.all %>
+      </div>
+
     </div>
   </div>
 

@@ -7,15 +7,18 @@
     <div>
       <ul class="nav navbar-nav">
         <li><%= link_to "Wikis", wikis_path %></li> 
-      <div class="pull-right user-info"> <% if user_signed_in? %>
-    Welcome <%=  current_user.email %>
-    <%= link_to "Edit Account", edit_user_registration_path %>
-    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-<% else %>
-    <%= link_to "Sign in", new_user_session_path%> or <%= link_to "Sign up", new_user_registration_path %>
-<% end %> 
-</div>
       </ul>
+      <div class="collapse navbar-collapse">
+       <ul class='nav navbar-nav pull-right user-info'> <% if user_signed_in? %>
+    Welcome <%=  current_user.email %>
+    <%= link_to "Edit Account", edit_user_registration_path, class: 'btn btn-info' %>
+    <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: 'btn btn-info'%>
+<% else %>
+    <%= link_to "Sign in", new_user_session_path, class: 'btn btn-info' %> or <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-info' %>
+<% end %> 
+
+        </ul>
+      </div>
     </div>
   </div>
 </nav>

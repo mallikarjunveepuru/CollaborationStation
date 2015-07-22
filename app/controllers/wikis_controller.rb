@@ -8,6 +8,7 @@ class WikisController < ApplicationController
   def show
     @users = User.all
     authorize @wiki
+    @collaborators = Collaborator.all
   end
 
   def new
@@ -17,6 +18,7 @@ class WikisController < ApplicationController
 
   def edit
     authorize @wiki
+    @users = User.all
   end
 
   def create
