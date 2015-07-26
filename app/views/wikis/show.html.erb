@@ -11,7 +11,12 @@
       <div class="panel-heading"><%=  markdown_to_html @wiki.title %></div>
       <div class="panel-body"><%= markdown_to_html @wiki.body %></div>
       <div class="panel-footer"><p>Created By:</p><%= @wiki.user.name %>
-        <p>Collaborators</p><%= @wiki.collaborators.all %>
+      <% unless @wiki.collaborators.empty? %>
+        <p>Collaborators</p>
+        <% @wiki.collaborators.each do |c| %>
+          <%= c.name %>
+        <% end %>
+      <% end %>
       </div>
 
     </div>
